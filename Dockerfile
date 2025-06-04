@@ -7,7 +7,7 @@ copy . .
 run mvn clean package -Dskiptest
 
 from openjdk:17.0.1-jdk-slim
-copy --from=build /target/tienda-1.ja tienda.jar
+copy --from=build /target/tienda-1.jar tienda.jar
 expose 80
 entrypoint ["java","-jar","tienda.jar"]
 
